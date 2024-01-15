@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <title>Barber</title>
 
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -15,6 +17,7 @@
     <link rel="stylesheet" href="partials/header.css">
     <link rel="stylesheet" href="partials/layout.css">
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 </head>
 
@@ -24,7 +27,7 @@
         <header>
             
             <nav class="header-content container">
-                <div class="header-icons">
+                <div class="header-icons" data-aos="fade-down">
                     <a href="#">
                         <i class="fa-brands fa-instagram fa-2x"></i>
                     </a>
@@ -38,19 +41,33 @@
                     </a>
                 </div>
 
-                <div class="header-logo">
-                    <img src="assets/logo.svg" alt="Logo da barbearia">
+                <div class="header-logo" data-aos="fade-up" data-aos-delay="300">
+                    <img
+                        src="assets/logo.svg"
+                        alt="Logo da barbearia"
+                        data-aos-duration="1500"
+                        data-aos="flip-up"
+                        data-aos-delay="300">
                 </div>
                 
-                <div class="header-button">
-                    <a href="">Agendar horário</a>
+                <div class="header-button" data-aos="fade-down">
+                    <a
+                        target="_blank"
+                        href="https://api.whatsapp.com/send?phone=5511000000000&text=Quero%20fazer%20um%20agendamento%20hoje!"
+                    >
+                        Agendar horário</a>
                 </div>
             </nav>
 
-            <main class="hero container">
+            <main class="hero container" data-aos="fade-up" data-aos-delay="400">
                 <h1>ESTILO É UM REFLEXO DA SUA ATITUDE E PERSONALIDADE.</h1>
                 <p>Horário de funcionamento: 09:00 ás 19:00</p>
-                <a href="#" class="button-contact" target="_blank">Agendar horário</a>
+                <a
+                    href="https://api.whatsapp.com/send?phone=5511000000000&text=Quero%20fazer%20um%20agendamento%20hoje!"
+                    class="button-contact"
+                    target="_blank"
+                >
+                    Agendar horário</a>
             </main>
         </header>
     </div>
@@ -58,11 +75,11 @@
 
     <section class="about">
         <div class="container about-content">
-            <div>
+            <div data-aos="zoom-in" data-aos-delay="100">
                 <img src="assets/images.svg" alt="imagem sobre a barbearia">
             </div>
 
-            <div class="about-description">
+            <div class="about-description" data-aos="zoom-out-left" data-aos-delay="100">
                 <h2>Sobre</h2>
                 <p>Lorem ipsum dolor sit amet consectetur. Ornare eget pellentesque proin risus. Orci proin morbi vestibulum convallis leo vestibulum mus. Non duis augue eros mattis a quis sem sodales.</p>
                 <p>Horário de funcionamento: <strong>09:00</strong> ás <strong>19:00</strong></p>
@@ -77,7 +94,7 @@
         </div>
 
         <section class="haircuts">
-            <div class="haircut">
+            <div class="haircut" data-aos="fade-up" data-aos-delay="150">
                 <img src="assets/corte1.png" alt="corte normal">
                 <div class="haircut-info">
                     <strong>Corte normal</strong>
@@ -87,7 +104,7 @@
                 </div>
             </div>
 
-            <div class="haircut">
+            <div class="haircut" data-aos="fade-up" data-aos-delay="250">
                 <img src="assets/corte2.png" alt="Barba completa">
                 <div class="haircut-info">
                     <strong>Barba completa</strong>
@@ -97,7 +114,7 @@
                 </div>
             </div>
 
-            <div class="haircut">
+            <div class="haircut" data-aos="fade-up" data-aos-delay="350">
                 <img src="assets/corte3.png" alt="Cabelo e barba">
                 <div class="haircut-info">
                     <strong>Cabelo e barba</strong>
@@ -140,6 +157,17 @@
         <p>Copyright 2024 | Barber - Todos os direitos reservados.</p>
     </footer>
 
-</body>
+    <a
+        href="https://api.whatsapp.com/send?phone=5511000000000&text=Quero%20fazer%20um%20agendamento%20hoje!"
+        class="btn-whatsapp"
+        target="_blank"
+        data-aos="zoom-in-up" data-aos-delay="350"
+    >
+        <img src="assets/whatssapp.svg" alt="botão whatsapp">
+        <span class="whatsapp-tooltip-text">Agende seu horário</span>
+    </a>
 
+
+    <script src="script.js"></script>
+</body>
 </html>
